@@ -22,6 +22,7 @@ To build the game and website, run:
 ```
 
 This script:
+
 1. Cleans up any old builds
 2. Creates a production build of the game
 3. Creates a production build of the website
