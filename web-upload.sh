@@ -21,6 +21,6 @@ s3cmd modify \
 # long cache timeout on eakpackage, kitten gifs, static assets
 s3cmd modify \
   --recursive \
-  --rexclude '^(?!.*\.(static|(kitten-\d+\.gif)|eakpackage)).*$' \
+  --rexclude '^(?!.*\.(static|gif|eakpackage)).*$' \
   --add-header='Cache-Control: public, max-age=31536000' \
   $1
