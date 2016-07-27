@@ -1,0 +1,12 @@
+#!/bin/bash
+file=$1
+out=$2
+
+set -e
+set -x
+
+echo "WebM pass 1:"
+ffmpeg -i "$file" -codec:v libvpx -b:v 500k -codec:a libvorbis -b:a 128k -vf scale=-1:720 -pass 1 -f webm -y /dev/null
+echo "WebM pass 2:"
+ffmpeg -i "$file" -codec:v libvpx -b:v 500k -codec:a libvorbis -b:a 128k -vf scale=-1:720 -pass 2 -f webm -y "$out"
+

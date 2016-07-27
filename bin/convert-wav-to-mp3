@@ -1,0 +1,9 @@
+#!/bin/bash
+set -x
+set -e
+
+bitrate=192k
+
+for i in *.wav; do
+  ffmpeg -i "$i" -ab "$bitrate" "${i%wav}mp3"
+done
