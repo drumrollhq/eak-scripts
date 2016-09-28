@@ -7,12 +7,12 @@ rm -rf web-deploy
 mkdir web-deploy
 
 cd E.A.K.
-gulp update-api --production
-# gulp clean-all
-gulp build --production
+node_modules/.bin/gulp update-api --production
+# node_modules/.bin/gulp clean-all
+node_modules/.bin/gulp build --production
 
 cd ../web
-gulp optimize
+node_modules/.bin/gulp optimize
 
 cd ../web-deploy
 cp -r ../E.A.K./public/* ./
