@@ -46,3 +46,27 @@ To safely (ie without visitors encountering a half-uploaded game) upload the gam
 where `$UPLOAD_TARGET` is the url to an S3 bucket e.g. `./web-upload.sh s3://tipexsomefelines.net`.
 
 Make sure you have `s3cmd` configured with the correct access credentials for your s3 bucket.
+
+### Creating users
+
+```bash
+$ node create-users.js
+
+Usage: create-users --offset <n> --number <n>
+
+Options:
+
+-h, --help        output usage information
+-V, --version     output the version number
+-o, --offset <n>  ID to start from
+-n, --number <n>  No of accounts to create
+-p, --prefix <s>  Username prefix
+```
+
+The tool will connect to http://localhost:3000 by default, you can overide this by setting the BASE_URL environment variable.
+
+```bash
+$ BASE_URL={URL} node create-users.js
+```
+
+The tool will create usernames like this: {prefix}+{offset}@drumrollhq.com, prefix is set to 'user' bt default and can be changed using the --prefix argument. The generated password will be Password123!

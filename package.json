@@ -1,0 +1,24 @@
+{
+  "name": "eak-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drumrollhq/eak-scripts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drumrollhq/eak-scripts/issues"
+  },
+  "homepage": "https://github.com/drumrollhq/eak-scripts#readme",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "commander": "^2.9.0"
+  }
+}
